@@ -258,6 +258,10 @@ export function OperationsEmployees() {
                   <option>Inactive</option>
                 </select>
               </div>
+              <div>
+                <Label htmlFor="password" style={{ color: '#ffac96' }}>Password</Label>
+                <Input id="password" type="password" placeholder="Enter password" className="mt-1" />
+              </div>
             </div>
             <div className="flex justify-end gap-3 pt-4">
               <Button type="button" variant="outline" onClick={() => setIsAddModalOpen(false)}>

@@ -274,8 +274,31 @@ export function VideoSession() {
                   <Card key={student.id} className="p-3 bg-gray-700 border-gray-600">
                     <div className="flex items-center justify-between">
                       <div>
-                        <p className="font-medium text-white text-sm">{student.name}</p>
-                        <p className="text-xs text-gray-400">{student.email}</p>
+                        <div className="flex items-center gap-2">
+                          <p className="font-medium text-white text-sm">
+                            {student.name}
+                          </p>
+
+                          {student.referralBadge && (
+                            <Badge
+                              className={`text-[10px] px-2 py-[2px] rounded-full ${
+                                student.referralBadge === 'Top Referrer'
+                                  ? 'bg-green-500/20 text-green-400'
+                                  : student.referralBadge === 'Social Butterfly'
+                                  ? 'bg-pink-500/20 text-pink-400'
+                                  : student.referralBadge === 'First Steps'
+                                  ? 'bg-blue-500/20 text-blue-400'
+                                  : 'bg-yellow-500/20 text-yellow-400'
+                              }`}
+                            >
+                              {student.referralBadge}
+                            </Badge>
+                          )}
+                        </div>
+
+                        <p className="text-xs text-gray-400">
+                          {student.email}
+                        </p>
                       </div>
                       <div className="flex gap-1">
                         <Badge className="bg-green-500 w-2 h-2 rounded-full p-0" />

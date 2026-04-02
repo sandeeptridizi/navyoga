@@ -250,6 +250,10 @@ export function OperationsTutors() {
                   <option>Inactive</option>
                 </select>
               </div>
+              <div>
+                <Label htmlFor="password" style={{ color: '#ffac96' }}>Password</Label>
+                <Input id="password" type="password" placeholder="Enter password" className="mt-1" />
+              </div>
             </div>
             <div>
               <Label htmlFor="bio" style={{ color: '#ffac96' }}>Bio</Label>

@@ -223,9 +223,15 @@ export function Classes() {
 
       {/* Search and Table */}
       <Card>
-        <CardHeader>
-          <CardTitle>All Classes</CardTitle>
-          <CardDescription>View and manage class schedules</CardDescription>
+        <CardHeader className="flex flex-row items-center justify-between">
+          <div>
+            <CardTitle>All Classes</CardTitle>
+            <CardDescription>View and manage class schedules</CardDescription>
+          </div>
+
+          <Button className="bg-[#610981] hover:bg-[#7a0a9f] text-white">
+            Export
+          </Button>
         </CardHeader>
         <CardContent>
           <div className="mb-4">

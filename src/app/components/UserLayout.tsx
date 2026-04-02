@@ -125,7 +125,7 @@ export function UserLayout() {
             </div>
             <div>
               <h1 className="font-semibold text-lg" style={{ color: '#ff691d' }}>NavYoga Academy</h1>
-              <Badge variant="secondary" className="text-xs hidden sm:inline-flex">Student Portal</Badge>
+              <Badge variant="secondary" className="text-xs hidden sm:inline-flex">Sandeep Sandy</Badge>
             </div>
           </div>
 

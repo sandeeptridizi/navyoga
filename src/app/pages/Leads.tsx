@@ -269,9 +269,15 @@ export function Leads() {
 
       {/* Search and Table */}
       <Card>
-        <CardHeader>
-          <CardTitle>All Leads</CardTitle>
-          <CardDescription>Track and manage potential students</CardDescription>
+        <CardHeader className="flex flex-row items-center justify-between">
+          <div>
+            <CardTitle>All Leads</CardTitle>
+            <CardDescription>Track and manage potential students</CardDescription>
+          </div>
+
+          <Button className="bg-[#610981] hover:bg-[#7a0a9f] text-white">
+            Export
+          </Button>
         </CardHeader>
         <CardContent>
           <div className="mb-4">

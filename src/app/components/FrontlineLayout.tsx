@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 import { toast } from "sonner";
 
 const navigation = [
-  { name: "Dashboard", href: "/frontline", icon: LayoutDashboard },
+  { name: "Dashboard", href: "/frontline", icon: LayoutDashboard, end: true},
   { name: "Leads", href: "/frontline/leads", icon: Users },
   { name: "Call Log", href: "/frontline/call-log", icon: PhoneCall },
   { name: "Daily Tasks", href: "/frontline/tasks", icon: ClipboardList },
@@ -42,6 +42,7 @@ export function FrontlineLayout() {
             <NavLink
               key={item.name}
               to={item.href}
+              end={item.href === "/frontline"}
               className={({ isActive }) =>
                 `flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 ${
                   isActive

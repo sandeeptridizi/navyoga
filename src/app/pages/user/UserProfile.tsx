@@ -211,8 +211,8 @@ export function UserProfile() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="conditions">Medical Conditions (if any)</Label>
-                  <Textarea id="conditions" placeholder="List any medical conditions or allergies" rows={3} defaultValue="None" />
+                  <Label htmlFor="conditions">Current Weight</Label>
+                  <Textarea id="conditions" placeholder="Mention your Weight" defaultValue="None" />
                 </div>
 
                 <Button className="w-full" variant="outline">

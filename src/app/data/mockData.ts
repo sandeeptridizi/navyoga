@@ -9,6 +9,7 @@ export interface Student {
   status: 'active' | 'inactive';
   membershipType: 'monthly' | 'quarterly' | 'yearly';
   enrolledClasses: string[];
+  referralBadge?: string; 
 }
 
 export interface Tutor {
@@ -66,6 +67,7 @@ export const students: Student[] = [
     status: 'active',
     membershipType: 'yearly',
     enrolledClasses: ['C001', 'C003', 'C006'],
+    referralBadge: 'Top Referrer'
   },
   {
     id: 'S002',
@@ -76,6 +78,7 @@ export const students: Student[] = [
     status: 'active',
     membershipType: 'monthly',
     enrolledClasses: ['C001', 'C005'],
+    referralBadge: 'First Steps',
   },
   {
     id: 'S003',
@@ -86,6 +89,7 @@ export const students: Student[] = [
     status: 'active',
     membershipType: 'quarterly',
     enrolledClasses: ['C002', 'C004'],
+    referralBadge: 'Social Butterfly',
   },
   {
     id: 'S004',

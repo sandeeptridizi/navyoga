@@ -76,7 +76,7 @@ export function Login() {
       id: 'user' as const,
       name: 'Student',
       icon: User,
-      description: 'Student portal',
+      description: 'Sandeep Sandy',
       color: '#ff691d',
       bgColor: '#ff691d10',
     },

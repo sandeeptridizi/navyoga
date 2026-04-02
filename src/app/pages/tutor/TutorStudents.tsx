@@ -173,14 +173,6 @@ export function TutorStudents() {
                   
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
-                      <p className="text-muted-foreground">Email</p>
-                      <p className="font-medium">{selectedStudent.email}</p>
-                    </div>
-                    <div>
-                      <p className="text-muted-foreground">Phone</p>
-                      <p className="font-medium">{selectedStudent.phone}</p>
-                    </div>
-                    <div>
                       <p className="text-muted-foreground">Join Date</p>
                       <p className="font-medium">{new Date(selectedStudent.joinDate).toLocaleDateString()}</p>
                     </div>

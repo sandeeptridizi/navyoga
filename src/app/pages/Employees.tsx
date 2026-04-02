@@ -290,9 +290,15 @@ export function Employees() {
 
       {/* Search and Table */}
       <Card>
-        <CardHeader>
-          <CardTitle>All Employees</CardTitle>
-          <CardDescription>View and manage staff information</CardDescription>
+        <CardHeader className="flex flex-row items-center justify-between">
+          <div>
+            <CardTitle>All Employees</CardTitle>
+            <CardDescription>View and manage staff information</CardDescription>
+          </div>
+
+          <Button className="bg-[#610981] hover:bg-[#7a0a9f] text-white">
+            Export
+          </Button>
         </CardHeader>
         <CardContent>
           <div className="mb-4">

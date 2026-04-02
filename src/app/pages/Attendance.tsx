@@ -203,9 +203,15 @@ export function Attendance() {
 
       {/* Search and Filters */}
       <Card>
-        <CardHeader>
-          <CardTitle>Attendance Records</CardTitle>
-          <CardDescription>View and filter attendance history</CardDescription>
+        <CardHeader className="flex flex-row items-center justify-between">
+          <div>
+            <CardTitle>Attendance Records</CardTitle>
+            <CardDescription>View and filter attendance history</CardDescription>
+          </div>
+
+          <Button className="bg-[#610981] hover:bg-[#7a0a9f] text-white">
+            Export
+          </Button>
         </CardHeader>
         <CardContent>
           <div className="mb-4 grid gap-4 md:grid-cols-2">

@@ -4,6 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../..
 import { Button } from "../../components/ui/button";
 import { Badge } from "../../components/ui/badge";
 import { Input } from "../../components/ui/input";
+import { Share2 } from 'lucide-react';
+
 import { 
   Play, 
   Clock, 
@@ -370,27 +372,52 @@ export function UserSelfPaced() {
                   )}
 
                   {/* Action Button */}
-                  <Button
-                    onClick={() => handleCourseClick(course.id)}
-                    className="w-full group/btn"
-                    style={
-                      course.enrolled
-                        ? { backgroundColor: '#610981', color: 'white' }
-                        : { backgroundColor: '#ff691d', color: 'white' }
+                  <div className="flex gap-2">
+                {/* Main Button */}
+                <Button
+                  onClick={() => handleCourseClick(course.id)}
+                  className={`flex-1 group/btn text-white ${
+                    course.enrolled
+                      ? 'bg-[#610981] hover:bg-[#7a0a9f]'
+                      : 'bg-[#ff691d] hover:bg-[#ff7f3a]'
+                  }`}
+                >
+                  {course.enrolled ? (
+                    <>
+                      <Play className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform" />
+                      {course.progress === 100 ? 'Review Course' : 'Continue Learning'}
+                    </>
+                  ) : (
+                    <>
+                      <BookOpen className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform" />
+                      Enroll Now
+                    </>
+                  )}
+                </Button>
+
+                {/* Share Button */}
+                <Button
+                  onClick={() => {
+                    if (navigator.share) {
+                      navigator.share({
+                        title: course.title,
+                        text: `Check out this course: ${course.title}`,
+                        url: window.location.href,
+                      });
+                    } else {
+                      navigator.clipboard.writeText(window.location.href);
+                      alert('Link copied!');
                     }
-                  >
-                    {course.enrolled ? (
-                      <>
-                        <Play className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform" />
-                        {course.progress === 100 ? 'Review Course' : 'Continue Learning'}
-                      </>
-                    ) : (
-                      <>
-                        <BookOpen className="w-4 h-4 mr-2" />
-                        Enroll Now
-                      </>
-                    )}
-                  </Button>
+                  }}
+                  className={`px-3 text-white ${
+                    course.enrolled
+                      ? 'bg-[#ff691d] hover:bg-[#ff7f3a]'
+                      : 'bg-[#610981] hover:bg-[#7a0a9f]'
+                  }`}
+                >
+                  <Share2 className="w-4 h-4" />
+                </Button>
+              </div>
                 </CardContent>
               </Card>
             </motion.div>
