@@ -69,32 +69,32 @@ export function Students() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-semibold">Students</h1>
-          <p className="text-muted-foreground mt-1">Manage your yoga center students</p>
+          <h1 className="text-3xl font-semibold">Sādhakas</h1>
+          <p className="text-muted-foreground mt-1">Manage your yoga center Sādhakas</p>
         </div>
         <Dialog open={isAddOpen} onOpenChange={setIsAddOpen}>
           <DialogTrigger asChild>
             <Button>
               <Plus className="w-4 h-4 mr-2" />
-              Add Student
+              Add Sādhaka
             </Button>
           </DialogTrigger>
           <DialogContent>
             <form onSubmit={handleAddStudent}>
               <DialogHeader>
-                <DialogTitle>Add New Student</DialogTitle>
+                <DialogTitle>Add New Sādhaka</DialogTitle>
                 <DialogDescription>
-                  Enter the details of the new student
+                  Enter the details of the new sādhaka
                 </DialogDescription>
               </DialogHeader>
               <div className="grid gap-4 py-4">
                 <div className="grid gap-2">
                   <Label htmlFor="name">Full Name</Label>
-                  <Input id="name" name="name" placeholder="Enter student name" />
+                  <Input id="name" name="name" placeholder="Enter sādhaka name" />
                 </div>
                 <div className="grid gap-2">
                   <Label htmlFor="email">Email</Label>
-                  <Input id="email" name="email" type="email" placeholder="student@email.com" />
+                  <Input id="email" name="email" type="email" placeholder="sādhaka@email.com" />
                 </div>
                 <div className="grid gap-2">
                   <Label htmlFor="phone">Phone</Label>
@@ -118,7 +118,7 @@ export function Students() {
                 <Button type="button" variant="outline" onClick={() => setIsAddOpen(false)}>
                   Cancel
                 </Button>
-                <Button type="submit">Add Student</Button>
+                <Button type="submit">Add Sādhaka</Button>
               </DialogFooter>
             </form>
           </DialogContent>
@@ -129,7 +129,7 @@ export function Students() {
       <div className="grid gap-4 md:grid-cols-3">
         <Card>
           <CardHeader>
-            <CardTitle>Total Students</CardTitle>
+            <CardTitle>Total Sādhakas</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-3xl font-semibold">{students.length}</div>
@@ -161,8 +161,8 @@ export function Students() {
       <Card>
         <CardHeader className="flex flex-row items-center justify-between">
           <div>
-            <CardTitle>All Students</CardTitle>
-            <CardDescription>View and manage student information</CardDescription>
+            <CardTitle>All Sādhakas</CardTitle>
+            <CardDescription>View and manage sādhaka information</CardDescription>
           </div>
 
           <Button className="bg-[#610981] hover:bg-[#7a0a9f] text-white">
@@ -256,9 +256,9 @@ export function Students() {
         <DialogContent>
           <form onSubmit={handleEditStudent}>
             <DialogHeader>
-              <DialogTitle>Edit Student</DialogTitle>
+              <DialogTitle>Edit Sādhaka</DialogTitle>
               <DialogDescription>
-                Update student information
+                Update sādhaka information
               </DialogDescription>
             </DialogHeader>
             {editingStudent && (

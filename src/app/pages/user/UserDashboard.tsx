@@ -5,7 +5,7 @@ import { Button } from "../../components/ui/button";
 import { Link } from "react-router";
 import { motion } from "motion/react";
 import { toast } from "sonner";
-import { ImageWithFallback } from "../../components/figma/ImageWithFallback";
+import { ImageWithFallback } from "../../components/Fallback/ImageWithFallback";
 
 export function UserDashboard() {
   const metrics = [

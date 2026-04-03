@@ -22,9 +22,9 @@ import { Badge } from "./ui/badge";
 const navigation = [
   { name: 'Dashboard', href: '/', icon: LayoutDashboard },
   { name: 'Leads', href: '/leads', icon: UserPlus },
-  { name: 'Students', href: '/students', icon: Users },
+  { name: 'Sādhakas', href: '/students', icon: Users },
   { name: 'Employees', href: '/employees', icon: Briefcase },
-  { name: 'Tutors', href: '/tutors', icon: GraduationCap },
+  { name: 'Yoga Shikshaks', href: '/tutors', icon: GraduationCap },
   { name: 'Classes', href: '/classes', icon: Calendar },
   { name: 'Attendance', href: '/attendance', icon: ClipboardCheck },
   { name: 'Financials', href: '/financials', icon: CreditCard },
@@ -116,7 +116,7 @@ export function AdminLayout() {
               </h1>
               <p className="text-xs flex items-center gap-1" style={{ color: '#ffac96' }}>
                 <span className="inline-block w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
-                Super Admin Panel
+                Yoga Samsthapak & Paramacharya Panel
               </p>
             </div>
           </div>
@@ -124,7 +124,7 @@ export function AdminLayout() {
           <div className="ml-auto flex items-center gap-4">
             <div className="hidden md:flex items-center gap-2">
               <Badge variant="outline" className="border-[#610981] text-[#610981]">
-                Super Admin
+                Yoga Samsthapak & Paramacharya
               </Badge>
             </div>
             <Button 

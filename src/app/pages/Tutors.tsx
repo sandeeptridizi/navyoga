@@ -80,28 +80,28 @@ export function Tutors() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-semibold">Tutors</h1>
-          <p className="text-muted-foreground mt-1">Manage your yoga instructors</p>
+          <h1 className="text-3xl font-semibold">Yoga Shikshaks</h1>
+          <p className="text-muted-foreground mt-1">Manage your Yoga Shikshaks</p>
         </div>
         <Dialog open={isAddOpen} onOpenChange={setIsAddOpen}>
           <DialogTrigger asChild>
             <Button>
               <Plus className="w-4 h-4 mr-2" />
-              Add Tutor
+              Add Yoga Shikshak
             </Button>
           </DialogTrigger>
           <DialogContent>
             <form onSubmit={handleAddTutor}>
               <DialogHeader>
-                <DialogTitle>Add New Tutor</DialogTitle>
+                <DialogTitle>Add New Yoga Shikshak</DialogTitle>
                 <DialogDescription>
-                  Enter the details of the new tutor
+                  Enter the details of the new yoga shikshak
                 </DialogDescription>
               </DialogHeader>
               <div className="grid gap-4 py-4">
                 <div className="grid gap-2">
                   <Label htmlFor="name">Full Name</Label>
-                  <Input id="name" name="name" placeholder="Enter tutor name" />
+                  <Input id="name" name="name" placeholder="Enter yoga shikshak name" />
                 </div>
                 <div className="grid gap-2">
                   <Label htmlFor="email">Email</Label>
@@ -124,7 +124,7 @@ export function Tutors() {
                 <Button type="button" variant="outline" onClick={() => setIsAddOpen(false)}>
                   Cancel
                 </Button>
-                <Button type="submit">Add Tutor</Button>
+                <Button type="submit">Add Yoga Shikshak</Button>
               </DialogFooter>
             </form>
           </DialogContent>
@@ -135,7 +135,7 @@ export function Tutors() {
       <div className="grid gap-4 md:grid-cols-4">
         <Card>
           <CardHeader>
-            <CardTitle>Total Tutors</CardTitle>
+            <CardTitle>Total Yoga Shikshaks</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-3xl font-semibold">{tutors.length}</div>
@@ -143,7 +143,7 @@ export function Tutors() {
         </Card>
         <Card>
           <CardHeader>
-            <CardTitle>Active Tutors</CardTitle>
+            <CardTitle>Active Yoga Shikshaks</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-3xl font-semibold text-green-500">
@@ -178,8 +178,8 @@ export function Tutors() {
       <Card>
         <CardHeader className="flex flex-row items-center justify-between">
           <div>
-            <CardTitle>All Tutors</CardTitle>
-            <CardDescription>View and manage tutor information</CardDescription>
+            <CardTitle>All Yoga Shikshaks</CardTitle>
+            <CardDescription>View and manage yoga shikshak information</CardDescription>
           </div>
 
           <Button className="bg-[#610981] hover:bg-[#7a0a9f] text-white">
@@ -296,9 +296,9 @@ export function Tutors() {
         <DialogContent>
           <form onSubmit={handleEditTutor}>
             <DialogHeader>
-              <DialogTitle>Edit Tutor</DialogTitle>
+              <DialogTitle>Edit Yoga Shikshak</DialogTitle>
               <DialogDescription>
-                Update tutor information
+                Update yoga shikshak information
               </DialogDescription>
             </DialogHeader>
             {editingTutor && (
